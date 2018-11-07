@@ -18,4 +18,5 @@ module.exports = {
   backgroundColor: '#e9e9e9', // Used for Offline Manifest
   themeColor: '#121212', // Used for Offline Manifest
   copyright: 'Copyright © 2018 Gaël Billon', // Copyright string for the RSS feed
+  htmlLang: 'en',
 }

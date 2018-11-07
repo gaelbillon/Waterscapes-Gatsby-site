@@ -6,6 +6,9 @@ console.log(`Using environment config: '${activeEnv}'`)
 require('dotenv').config({
   path: `.env.${activeEnv}`,
 })
+console.log('NODE_ENV: ' + process.env.NODE_ENV)
+console.log('SPACE_ID: ' + process.env.SPACE_ID)
+console.log('ACCESS_TOKEN: ' + process.env.ACCESS_TOKEN)
 console.log('MAPBOX_API_KEY: ' + process.env.MAPBOX_API_KEY)
 console.log('GA_TRACKING_ID: ' + process.env.GA_TRACKING_ID)
 
