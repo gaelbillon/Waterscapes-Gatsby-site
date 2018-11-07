@@ -54,7 +54,7 @@ const Menu = () => {
               Home
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/about/" activeStyle={activeLinkStyle}>
               About
             </Link>
@@ -63,7 +63,7 @@ const Menu = () => {
             <Link to="/contact/" activeStyle={activeLinkStyle}>
               Contact
             </Link>
-          </li>
+          </li> */}
         </ul>
       </Nav>
     </Header>
