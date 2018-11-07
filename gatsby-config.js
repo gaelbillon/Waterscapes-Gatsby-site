@@ -1,11 +1,11 @@
 const config = require('./src/utils/siteConfig')
 let contentfulConfig
 
-// let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development'
-// console.log(`Using environment config: '${activeEnv}'`)
-// require('dotenv').config({
-//   path: `.env.${activeEnv}`,
-// })
+let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development'
+console.log(`Using environment config: '${activeEnv}'`)
+require('dotenv').config({
+  path: `.env.${activeEnv}`,
+})
 console.log('MAPBOX_API_KEY: ' + process.env.MAPBOX_API_KEY)
 console.log('GA_TRACKING_ID: ' + process.env.GA_TRACKING_ID)
 
@@ -29,6 +29,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl,
     mapboxApiKey: process.env.MAPBOX_API_KEY,
+    // mapboxApiKey: 'pk.eyJ1IjoiZ2FlbCIsImEiOiJjam80d3l2Z3UwNG5vM3BudzJjeDJkenhzIn0.HObb1C7RW6lbQMkewtSPtQ',
     rssMetadata: {
       site_url: config.siteUrl,
       feed_url: `${config.siteUrl}/rss.xml`,

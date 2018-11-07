@@ -47,8 +47,6 @@ const Links = styled.div`
   }
 `
 const LinksTitle = styled.div`
-  margin: 0 auto;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
   font-weight: bold;
   margin-bottom: 1em;
 `
