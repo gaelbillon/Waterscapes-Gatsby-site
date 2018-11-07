@@ -1,11 +1,11 @@
 const config = require('./src/utils/siteConfig')
 let contentfulConfig
 
-let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development'
-console.log(`Using environment config: '${activeEnv}'`)
-require('dotenv').config({
-  path: `.env.${activeEnv}`,
-})
+// let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development'
+// console.log(`Using environment config: '${activeEnv}'`)
+// require('dotenv').config({
+//   path: `.env.${activeEnv}`,
+// })
 console.log('MAPBOX_API_KEY: ' + process.env.MAPBOX_API_KEY)
 console.log('GA_TRACKING_ID: ' + process.env.GA_TRACKING_ID)
 
