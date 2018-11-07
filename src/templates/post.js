@@ -59,9 +59,17 @@ const PostTemplate = ({ data, pageContext }) => {
 
       <Container>
         <MapWrapper>
-          <StaticMap width="100%" height="20em" latitude={location.lat} longitude={location.lon} zoom={5} mapStyle="mapbox://styles/mapbox/outdoors-v10" mapboxApiAccessToken={process.env.MAPBOX_API_KEY // mapStyle="mapbox://styles/mapbox/light-v9" // mapStyle="mapbox://styles/mapbox/satellite-v9"
-            }>
-            <Marker />
+          <StaticMap
+            width="100%"
+            height="20em"
+            latitude={location.lat}
+            longitude={location.lon}
+            zoom={5}
+            mapStyle="mapbox://styles/mapbox/outdoors-v10"
+            mapboxApiAccessToken={process.env.MAPBOX_API_KEY}
+          >
+          {/* // mapStyle="mapbox://styles/mapbox/light-v9" // mapStyle="mapbox://styles/mapbox/satellite-v9" */}
+          <Marker />
           </StaticMap>
         </MapWrapper>
 
@@ -123,3 +131,7 @@ export const query = graphql`
        `
 
 export default PostTemplate
+function newFunction() {
+  return process.env.MAPBOX_API_KEY;
+}
+
