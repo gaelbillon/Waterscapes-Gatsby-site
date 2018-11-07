@@ -20,6 +20,7 @@ try {
 module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl,
+    mapboxApiKey: process.env.MAPBOX_API_KEY,
     rssMetadata: {
       site_url: config.siteUrl,
       feed_url: `${config.siteUrl}/rss.xml`,
