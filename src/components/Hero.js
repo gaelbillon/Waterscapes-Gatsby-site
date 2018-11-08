@@ -59,6 +59,7 @@ const Hero = props => (
       height={props.height}
       fluid={props.image.fluid}
       backgroundColor={'#eeeeee'}
+      fadeIn={false}
     />
     <Title>{props.title}</Title>
     <SubTitle>{props.area}, {props.country}</SubTitle>
