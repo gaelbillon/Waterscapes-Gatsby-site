@@ -68,9 +68,7 @@ const Card = ({ slug, heroImage, title, publishDate, body, area, country, ...pro
       <Img fluid = { heroImage.fluid } backgroundColor={'#eeeeee'} fadeIn={true} />
         <Title>{title}</Title>
         {/* <Date>{publishDate}</Date> */}
-        <AreaCountry>
-          {area}, {country}
-        </AreaCountry>
+        <AreaCountry>{area}, {country}</AreaCountry>
         <Excerpt dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.excerpt }} />
       </Link>
     </Post>
