@@ -66,7 +66,7 @@ const Card = ({ slug, heroImage, title, publishDate, body, area, country, ...pro
   return (
     <Post featured={props.featured}>
       <Link to={`/${slug}/`}>
-        <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
+        <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} fadeIn={true} />
         <Title>{title}</Title>
         {/* <Date>{publishDate}</Date> */}
         <AreaCountry>{area}, {country}</AreaCountry>

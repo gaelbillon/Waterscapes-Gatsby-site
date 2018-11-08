@@ -147,7 +147,7 @@ module.exports = {
             },
             query: `
               {
-            allContentfulWaterpoint(limit: 1000, sort: {fields: [publishDate], order: DESC}) {
+            allContentfulPost(limit: 1000, sort: {fields: [publishDate], order: DESC}) {
                edges {
                  node {
                    title
