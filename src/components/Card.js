@@ -63,21 +63,19 @@ const Excerpt = styled.p`
 `
 
 const Card = ({ slug, heroImage, title, publishDate, body, area, country, ...props }) => {
-  return (
-    <Post featured={props.featured}>
+  return <Post featured={props.featured}>
       <Link to={`/${slug}/`}>
-        <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} fadeIn={true} />
+        <Img sizes={heroImage.sizes} backgroundColor={'#eeeeee'} fadeIn={true} />
         <Title>{title}</Title>
         {/* <Date>{publishDate}</Date> */}
-        <AreaCountry>{area}, {country}</AreaCountry>
-        <Excerpt
-          dangerouslySetInnerHTML={{
-            __html: body.childMarkdownRemark.excerpt,
-          }}
-        />
+        <AreaCountry>
+          {area}, {country}
+        </AreaCountry>
+        <Excerpt dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.excerpt }} />
       </Link>
     </Post>
-  )
 }
 
 export default Card
+
+// fluid = { heroImage.fluid }

@@ -15,33 +15,29 @@ const Index = ({ data, pageContext }) => {
   const { currentPage } = pageContext
   const isFirstPage = currentPage === 1
 
-  return (
-    <Layout>
+  return <Layout>
       <SEO />
-      {!isFirstPage && (
-        <Helmet>
+      {!isFirstPage && <Helmet>
           <title>{`${config.siteTitle} - Page ${currentPage}`}</title>
-        </Helmet>
-      )}
+        </Helmet>}
       <Container>
-        {isFirstPage ? (
+        {/*{isFirstPage ? (
           <CardList>
             <Card {...featuredPost} featured />
             {posts.slice(1).map(({ node: post }) => (
               <Card key={post.id} {...post} />
             ))}
           </CardList>
-        ) : (
+        ) : (*/}
           <CardList>
             {posts.map(({ node: post }) => (
               <Card key={post.id} {...post} />
             ))}
           </CardList>
-        )}
+        {/*)}*/}
       </Container>
       <Pagination context={pageContext} />
     </Layout>
-  )
 }
 
 export const query = graphql`
@@ -60,9 +56,8 @@ export const query = graphql`
           country
           publishDate(formatString: "MMMM DD, YYYY")
           heroImage {
-            title
-            fluid(maxWidth: 1800) {
-              ...GatsbyContentfulFluid_tracedSVG
+            sizes(maxWidth: 374, maxHeight: 225, resizingBehavior: SCALE) {
+              ...GatsbyContentfulSizes_tracedSVG
             }
           }
           body {
@@ -78,4 +73,10 @@ export const query = graphql`
 `
 
 export default Index
-// _withWebp_noBase64
+
+// heroImage {
+//   title
+//   fluid(maxWidth: 1800) {
+//               ...GatsbyContentfulFluid_withWebp_noBase64
+//   }
+// }
