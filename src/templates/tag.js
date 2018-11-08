@@ -11,10 +11,10 @@ import Pagination from '../components/Pagination'
 import Container from '../components/Container'
 
 const TagTemplate = ({ data, pageContext }) => {
-  const posts = sortBy(data.contentfulTag.post, 'publishDate').reverse()
+  const waterpoints = sortBy(data.contentfulTag.waterpoint, 'publishDate').reverse()
 
   const { title, slug } = data.contentfulTag
-  const numberOfPosts = posts.length
+  const numberOfWaterpoints = waterpoints.length
   const skip = pageContext.skip
   const limit = pageContext.limit
   const currentPage = pageContext.currentPage
@@ -48,14 +48,14 @@ const TagTemplate = ({ data, pageContext }) => {
 
       <Container>
         <PageTitle small>
-          {numberOfPosts} Posts Tagged: &ldquo;
+          {numberOfWaterpoints} Waterpoints Tagged: &ldquo;
           {title}
           &rdquo;
         </PageTitle>
 
         <CardList>
-          {posts.slice(skip, limit * currentPage).map(post => (
-            <Card {...post} key={post.id} />
+          {waterpoints.slice(skip, limit * currentPage).map(waterpoint => (
+            <Card {...waterpoint} key={waterpoint.id} />
           ))}
         </CardList>
       </Container>
@@ -70,7 +70,7 @@ export const query = graphql`
       title
       id
       slug
-      post {
+      waterpoint {
         id
         title
         slug

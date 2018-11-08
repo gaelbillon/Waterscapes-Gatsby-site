@@ -81,6 +81,9 @@ exports.createPages = ({ graphql, actions }) => {
               post {
                 id
               }
+              waterpoint {
+                id
+              }
             }
           }
         }
@@ -91,12 +94,14 @@ exports.createPages = ({ graphql, actions }) => {
 
       // Create tag pages with pagination if needed
       tags.map(({ node }) => {
-        const totalPosts = node.post !== null ? node.post.length : 0
+        const totalPosts = node.waterpoint !== null ? node.waterpoint.length : 0
         const numPages = Math.ceil(totalPosts / postsPerPage)
         Array.from({ length: numPages }).forEach((_, i) => {
           createPage({
             path:
-              i === 0 ? `/tag/${node.slug}/` : `/tag/${node.slug}/${i + 1}/`,
+              i === 0
+                ? `/tag/${node.slug}/`
+                : `/tag/${node.slug}/${i + 1}/`,
             component: path.resolve(`./src/templates/tag.js`),
             context: {
               slug: node.slug,
