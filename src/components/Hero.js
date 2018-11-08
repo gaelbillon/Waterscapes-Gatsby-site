@@ -48,6 +48,10 @@ const Title = styled.h1`
   text-align: center;
   color: white;
 `
+const SubTitle = styled(Title)`
+  font-size: 2em;
+  top: 65%;
+`
 
 const Hero = props => (
   <Wrapper>
@@ -57,6 +61,7 @@ const Hero = props => (
       backgroundColor={'#eeeeee'}
     />
     <Title>{props.title}</Title>
+    <SubTitle>{props.area}, {props.country}</SubTitle>
   </Wrapper>
 )
 

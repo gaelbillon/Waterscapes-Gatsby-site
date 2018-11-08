@@ -5,8 +5,8 @@ import Img from 'gatsby-image'
 
 const Post = styled.li`
   position: relative;
-  border: 1px solid ${props => props.theme.colors.secondary};
-  border-radius: 2px;
+  // border: 1px solid ${props => props.theme.colors.secondary};
+  // border-radius: 2px;
   margin: 0 0 1em 0;
   width: 100%;
   transition: background 0.2s;
@@ -26,6 +26,7 @@ const Post = styled.li`
     height: 100%;
     width: 100%;
     color: ${props => props.theme.colors.base};
+    // color: #373f49;
     text-decoration: none;
     .gatsby-image-wrapper {
       height: 0;
@@ -39,28 +40,36 @@ const Post = styled.li`
 
 const Title = styled.h2`
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: capitalize;
-  margin: 1rem 1rem 0.5rem 1rem;
+  // margin: 1rem 1rem 0.5rem 1rem;
+  margin: 1rem 0rem 0.5rem 0rem;
 `
 
-const Date = styled.h3`
-  margin: 0 1rem 1.5rem 1rem;
+// const Date = styled.h3`
+//   margin: 0 1rem 1.5rem 1rem;
+//   color: gray;
+// `
+const AreaCountry = styled.h3`
+  // margin: 0 1rem 1.5rem 1rem;
+  margin: 0 0rem 1.5rem 0rem;
   color: gray;
 `
 
 const Excerpt = styled.p`
-  margin: 0 1rem 1rem 1rem;
+  // margin: 0 1rem 1rem 1rem;
+  margin: 0 0rem 1rem 0rem;
   line-height: 1.6;
 `
 
-const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
+const Card = ({ slug, heroImage, title, publishDate, body, area, country, ...props }) => {
   return (
     <Post featured={props.featured}>
       <Link to={`/${slug}/`}>
         <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
         <Title>{title}</Title>
-        <Date>{publishDate}</Date>
+        {/* <Date>{publishDate}</Date> */}
+        <AreaCountry>{area}, {country}</AreaCountry>
         <Excerpt
           dangerouslySetInnerHTML={{
             __html: body.childMarkdownRemark.excerpt,

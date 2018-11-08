@@ -9,9 +9,9 @@ const Body = styled.div`
   h1,
   h2,
   h3 {
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.25;
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.5rem 0;
     text-transform: capitalize;
   }
 
@@ -19,7 +19,7 @@ const Body = styled.div`
     font-size: 1.5em;
   }
   h2 {
-    font-size: 1.25em;
+    font-size: 1.35em;
   }
   h3 {
     font-size: 1em;
@@ -28,6 +28,18 @@ const Body = styled.div`
   p {
     line-height: 1.6;
     margin: 0 0 2em 0;
+    font-weight: 300;
+    &:first-child:first-letter {
+      font-size: 3em;
+      font-family: 'Times New Roman';
+      // position: relative;
+      // top: -3em;
+      -webkit-initial-letter: 3;
+      initial-letter: 3;
+      color: black;
+      // font-weight: bold;
+      margin-right: 0.15em;
+    }
   }
 
   a {

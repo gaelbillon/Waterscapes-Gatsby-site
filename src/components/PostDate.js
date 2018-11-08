@@ -8,8 +8,10 @@ const Wrapper = styled.div`
 
 const Date = styled.p`
   display: inline-block;
+  p,
   span {
-    font-weight: 600;
+    font-weight: 200;
+    color: #a7a7a7;
   }
 `
 
@@ -17,7 +19,7 @@ const PostDate = props => {
   return (
     <Wrapper>
       <Date>
-        <span>Published:</span> {props.date}
+        <span>Published on {props.date}</span> 
       </Date>
     </Wrapper>
   )

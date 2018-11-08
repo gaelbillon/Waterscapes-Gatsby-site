@@ -23,7 +23,9 @@ const PostTemplate = ({ data, pageContext }) => {
     publishDate,
     tags,
     location,
-    links
+    links,
+    area,
+    country,
   } = data.contentfulWaterpoint
   const postNode = data.contentfulWaterpoint
 
@@ -36,7 +38,7 @@ const PostTemplate = ({ data, pageContext }) => {
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
 
-      <Hero title={title} image={heroImage} height={'60vh'} />
+      <Hero title={title} image={heroImage} area={area} country={country} height={'60vh'} />
 
       <Container>
         <PostContentContainer>
@@ -47,7 +49,7 @@ const PostTemplate = ({ data, pageContext }) => {
           <PostDate date={publishDate} />
         </PostContentContainer>
       </Container>
-      <PostLinks previous={previous} next={next} />
+      {/* <PostLinks previous={previous} next={next} /> */}
     </Layout>
 }
 
@@ -94,6 +96,8 @@ export const query = graphql`
                  html
                }
              }
+             area
+             country
            }
          }
        `
