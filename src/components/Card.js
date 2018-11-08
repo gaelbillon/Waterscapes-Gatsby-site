@@ -65,7 +65,7 @@ const Excerpt = styled.p`
 const Card = ({ slug, heroImage, title, publishDate, body, area, country, ...props }) => {
   return <Post featured={props.featured}>
       <Link to={`/${slug}/`}>
-        <Img sizes={heroImage.sizes} backgroundColor={'#eeeeee'} fadeIn={true} />
+      <Img fluid = { heroImage.fluid } backgroundColor={'#eeeeee'} fadeIn={true} />
         <Title>{title}</Title>
         {/* <Date>{publishDate}</Date> */}
         <AreaCountry>
@@ -79,3 +79,5 @@ const Card = ({ slug, heroImage, title, publishDate, body, area, country, ...pro
 export default Card
 
 // fluid = { heroImage.fluid }
+// sizes = { heroImage.sizes }
+// fixed = { heroImage.fixed }

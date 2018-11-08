@@ -41,36 +41,32 @@ const Index = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query($skip: Int!, $limit: Int!) {
-    allContentfulWaterpoint(
-      sort: { fields: [publishDate], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          title
-          id
-          slug
-          area
-          country
-          publishDate(formatString: "MMMM DD, YYYY")
-          heroImage {
-            sizes(maxWidth: 374, maxHeight: 225, resizingBehavior: SCALE) {
-              ...GatsbyContentfulSizes_tracedSVG
-            }
-          }
-          body {
-            childMarkdownRemark {
-              html
-              excerpt(pruneLength: 80)
-            }
-          }
-        }
-      }
-    }
-  }
-`
+         query($skip: Int!, $limit: Int!) {
+           allContentfulWaterpoint(sort: { fields: [publishDate], order: DESC }, limit: $limit, skip: $skip) {
+             edges {
+               node {
+                 title
+                 id
+                 slug
+                 area
+                 country
+                 publishDate(formatString: "MMMM DD, YYYY")
+                 heroImage {
+                   fluid(maxWidth: 400) {
+                     ...GatsbyContentfulFluid_tracedSVG
+                   }
+                 }
+                 body {
+                   childMarkdownRemark {
+                     html
+                     excerpt(pruneLength: 80)
+                   }
+                 }
+               }
+             }
+           }
+         }
+       `
 
 export default Index
 
