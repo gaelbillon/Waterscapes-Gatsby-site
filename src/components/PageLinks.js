@@ -5,7 +5,9 @@ require('prismjs/themes/prism.css')
 const Links = styled.div`
   margin: 0 auto;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
-
+  font-size: ${props => props.theme.fonts.article.fontSize};
+  letter-spacing: ${props => props.theme.fonts.article.letterSpacing};
+  font-family: ${props => props.theme.fonts.article.fontFamily};
   p {
     line-height: 1.6;
     margin: 0 0 2em 0;

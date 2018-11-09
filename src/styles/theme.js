@@ -4,6 +4,7 @@ const theme = {
     base: '#373f49', // Dark Gray
     secondary: '#e9e9e9', // Medium Gray
     tertiary: '#f3f3f3', // Light Gray
+    quaternary: '#fcfcfc', // Vary Light Gray
     highlight: '#5b8bf7', // Light Blue
   },
   sizes: {
@@ -19,6 +20,13 @@ const theme = {
     medium: '50em',
     large: '70em',
   },
+  fonts: {
+    article: {
+      fontFamily: 'Georgia',
+      letterSpacing: '0.01em',
+      fontSize: '1.07em',
+    }
+  }
 }
 
 export default theme
