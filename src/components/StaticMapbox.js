@@ -32,7 +32,7 @@ const StaticMapbox = ({ data, props }) => {
     <MapWrapper>
       <StaticMap
         width="100%"
-        height="20em"
+        height="17em"
         latitude={props.location.lat}
         longitude={props.location.lon}
         zoom={5}

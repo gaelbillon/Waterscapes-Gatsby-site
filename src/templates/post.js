@@ -16,16 +16,31 @@ import PostContentContainer from '../components/PostContentContainer'
 import ImageGallery from '../components/ImageGallery'
 import styled from 'styled-components'
 
-
+const LeftColumn = styled.div`
+  float: left;
+  width: 60%;
+  @media (max-width: 750px) {
+    // float: right;
+    width: 100%;
+  }
+  // max-width: ${props => props.theme.sizes.maxWidthCentered};
+  // margin: 0 auto;
+  padding-right: 1em;
+`
 const SideBar = styled.div`
   width: 40%;
   float: right;
-  margin-left: 1em;
+  // padding-left: 1em;
   @media (max-width: 700px) {
-    float: right;
+    // float: right;
     width: 100%;
   }
 `
+
+const ArticleFooter = styled.div`
+  clear: both;
+`
+
 const PostTemplate = ({ data, pageContext }) => {
   const {
     title,
@@ -55,16 +70,22 @@ const PostTemplate = ({ data, pageContext }) => {
 
       <Container>
         <PostContentContainer>
-          <PageBody body={body} />
+        
+          <LeftColumn>
+            <PageBody body={body} />
+            {links && <PageLinks links={links} />}
+          </LeftColumn>
+        
           <SideBar>
             <StaticMapbox location={location} />
             {images && <ImageGallery images={images} />}
           </SideBar>
-          
-        <PageLinks links={links} />
-          {tags && <TagList tags={tags} />}
-          
-          <PostDate date={publishDate} />
+
+          <ArticleFooter>
+            {tags && <TagList tags={tags} />}
+            <PostDate date={publishDate} />
+          </ArticleFooter>
+
         </PostContentContainer>
       </Container>
       {/* <PostLinks previous={previous} next={next} /> */}
