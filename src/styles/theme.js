@@ -9,7 +9,7 @@ const theme = {
   sizes: {
     // maxWidth: '1050px',
     maxWidth: 'calc(90% - 15vmin);',
-    maxWidthCentered: '850px',
+    maxWidthCentered: '1000px',
     // maxWidthCentered: 'calc(80% - 10vmin);',
     // maxWidthCenteredMax800px: 'calc(95% - 5vmin);',
     // maxWidthCenteredMax500px: 'calc(100% - 0vmin);',

@@ -5,10 +5,11 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import styled from 'styled-components'
 
 const MapWrapper = styled.div`
-  float: right;
-  width: 40%;
+  // float: right;
+  // width: 40%;
+  width: 100%;
   min-width: 17rem;
-  margin-left: 1em;
+  // margin-left: 1em;
   margin-bottom: 1em;
   // margin: 4em 0 1em 1em;
   @media (max-width: 700px) {

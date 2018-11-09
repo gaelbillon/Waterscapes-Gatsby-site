@@ -7,13 +7,21 @@ import Hero from '../components/Hero'
 import Container from '../components/Container'
 import PageBody from '../components/PageBody'
 import TagList from '../components/TagList'
-import PostLinks from '../components/PostLinks'
+// import PostLinks from '../components/PostLinks'
 import PostDate from '../components/PostDate'
 import SEO from '../components/SEO'
 import PageLinks from '../components/PageLinks'
 import StaticMapbox from '../components/StaticMapbox'
 import PostContentContainer from '../components/PostContentContainer'
+import ImageGallery from '../components/ImageGallery'
+import styled from 'styled-components'
 
+
+const SideBar = styled.div`
+  width: 40%;
+  float: right;
+  margin-left: 1em;
+`
 const PostTemplate = ({ data, pageContext }) => {
   const {
     title,
@@ -26,6 +34,7 @@ const PostTemplate = ({ data, pageContext }) => {
     links,
     area,
     country,
+    images,
   } = data.contentfulWaterpoint
   const postNode = data.contentfulWaterpoint
 
@@ -42,9 +51,14 @@ const PostTemplate = ({ data, pageContext }) => {
 
       <Container>
         <PostContentContainer>
-          <StaticMapbox location={location} />
+          <SideBar>
+            <StaticMapbox location={location} />
+            {images && <ImageGallery images={images} />}
+          </SideBar>
+
           <PageBody body={body} />
           <PageLinks links={links} />
+
           {tags && <TagList tags={tags} />}
           <PostDate date={publishDate} />
         </PostContentContainer>
@@ -98,6 +112,19 @@ export const query = graphql`
              }
              area
              country
+             images {
+               id
+               title
+               description
+               fluid(maxWidth: 500) {
+                 ...GatsbyContentfulFluid_withWebp_noBase64
+               }
+               ogimg: resize(width: 500) {
+                 src
+                 width
+                 height
+               }
+             }
            }
          }
        `

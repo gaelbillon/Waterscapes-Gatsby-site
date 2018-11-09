@@ -5,33 +5,17 @@ require('prismjs/themes/prism.css')
 const Body = styled.div`
   margin: 0 auto;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
-
-  h1,
-  h2,
-  h3 {
-    font-weight: 400;
-    line-height: 1.25;
-    margin: 0 0 0.5rem 0;
-    text-transform: capitalize;
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-  h2 {
-    font-size: 1.35em;
-  }
-  h3 {
-    font-size: 1em;
-  }
-
+  // font-family: 'Times New Roman';
+  font-size: 1.07em;
+  letter-spacing: 0.01em;
+  font-family: Georgia;
   p {
     line-height: 1.6;
     margin: 0 0 2em 0;
     font-weight: 300;
     &:first-child:first-letter {
       font-size: 3em;
-      font-family: 'Times New Roman';
+      // font-family: 'Times New Roman';
       // position: relative;
       // top: -3em;
       -webkit-initial-letter: 3;

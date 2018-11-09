@@ -115,5 +115,24 @@ const GlobalStyle = createGlobalStyle`
       box-shadow: none;
     }
   }
+
+    h1,
+  h2,
+  h3 {
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0 0 0.5rem 0;
+    text-transform: capitalize;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.35em;
+  }
+  h3 {
+    font-size: 1em;
+  }
 `
 export default GlobalStyle

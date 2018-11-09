@@ -46,9 +46,14 @@ const Links = styled.div`
     }
   }
 `
-const LinksTitle = styled.div`
-  font-weight: bold;
+const LinksTitle = styled.h2`
+  // font-weight: bold;
   margin-bottom: 1em;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 0.5rem 0;
+  text-transform: capitalize;
+  font-size: 1.35em;
 `
 
 const PageLinks = props => {
