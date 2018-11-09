@@ -8,6 +8,7 @@ import Container from '../components/Container'
 import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
 import config from '../utils/siteConfig'
+import HomePageHero from '../components/HomePageHero'
 
 const Index = ({ data, pageContext }) => {
   const posts = data.allContentfulWaterpoint.edges
@@ -20,7 +21,9 @@ const Index = ({ data, pageContext }) => {
       {!isFirstPage && <Helmet>
           <title>{`${config.siteTitle} - Page ${currentPage}`}</title>
         </Helmet>}
+
       <Container>
+        <HomePageHero />
         {/*{isFirstPage ? (
           <CardList>
             <Card {...featuredPost} featured />
@@ -29,11 +32,9 @@ const Index = ({ data, pageContext }) => {
             ))}
           </CardList>
         ) : (*/}
-          <CardList>
-            {posts.map(({ node: post }) => (
-              <Card key={post.id} {...post} />
-            ))}
-          </CardList>
+        <CardList>
+          {posts.map(({ node: post }) => <Card key={post.id} {...post} />)}
+        </CardList>
         {/*)}*/}
       </Container>
       <Pagination context={pageContext} />

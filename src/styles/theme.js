@@ -25,6 +25,10 @@ const theme = {
       fontFamily: 'Georgia',
       letterSpacing: '0.01em',
       fontSize: '1.07em',
+    },
+    sansSerif: {
+      fontWeight: '400',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     }
   }
 }
