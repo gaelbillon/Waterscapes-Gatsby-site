@@ -33,19 +33,21 @@ const BgImg = styled(Img)`
     z-index: 1;
   }
 `
+const TitlesWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  text-align: center;
+`
 
 const Title = styled.h1`
   font-size: 3em;
   text-transform: capitalize;
   font-weight: 600;
-  position: absolute;
-  width: 100%;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
   padding: 0 1rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
   color: white;
 `
 const SubTitle = styled(Title)`
@@ -55,13 +57,18 @@ const SubTitle = styled(Title)`
 
 const Hero = props => (
   <Wrapper>
+    
     <BgImg
       height={props.height}
       fluid={props.image.fluid}
       // fadeIn={false}
     />
-    <Title>{props.title}</Title>
-    <SubTitle>{props.area}, {props.country}</SubTitle>
+
+    <TitlesWrapper>
+      <Title>{props.title}</Title>
+      <SubTitle>{props.area}, {props.country}</SubTitle>
+    </TitlesWrapper>
+
   </Wrapper>
 )
 
