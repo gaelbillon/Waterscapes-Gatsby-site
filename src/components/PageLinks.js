@@ -51,6 +51,7 @@ const Links = styled.div`
 const LinksTitle = styled.h2`
   // font-weight: bold;
   margin-bottom: 1em;
+  font-family: ${props => props.theme.fonts.article.fontFamily};
   font-weight: 400;
   line-height: 1.25;
   margin: 0 0 0.5rem 0;

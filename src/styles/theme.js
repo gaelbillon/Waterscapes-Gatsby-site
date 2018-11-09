@@ -10,6 +10,7 @@ const theme = {
   sizes: {
     // maxWidth: '1050px',
     maxWidth: 'calc(90% - 15vmin);',
+    maxWidthSmall: 'calc(95% - 5vmin);',
     maxWidthCentered: '1000px',
     // maxWidthCentered: 'calc(80% - 10vmin);',
     // maxWidthCenteredMax800px: 'calc(95% - 5vmin);',
@@ -28,9 +29,10 @@ const theme = {
     },
     sansSerif: {
       fontWeight: '400',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-    }
-  }
+      fontFamily:
+        '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    },
+  },
 }
 
 export default theme

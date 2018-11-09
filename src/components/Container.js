@@ -5,6 +5,11 @@ const Wrapper = styled.section`
   margin: 0 auto auto;
   width: 100%;
   max-width: ${props => props.theme.sizes.maxWidth};
+  // background-color: green;
+  @media screen and (max-width: 600px) {
+    max-width: ${props => props.theme.sizes.maxWidthSmall};
+    // background-color: orange;
+  }
   padding: 3em 1.5em 2em;
   flex-grow: 1;
 `
