@@ -10,7 +10,7 @@ const MapWrapper = styled.div`
   width: 100%;
   // min-width: 12rem;
   // margin-left: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 4em;
   // margin: 4em 0 1em 1em;
   // @media (max-width: 700px) {
   //   float: right;

@@ -19,20 +19,15 @@ import styled from 'styled-components'
 const LeftColumn = styled.div`
   float: left;
   width: 60%;
-  @media (max-width: 750px) {
-    // float: right;
+  @media screen and (max-width: ${props => props.theme.responsive.medium}) {
     width: 100%;
   }
-  // max-width: ${props => props.theme.sizes.maxWidthCentered};
-  // margin: 0 auto;
   padding-right: 1em;
 `
 const SideBar = styled.div`
   width: 40%;
   float: right;
-  // padding-left: 1em;
   @media (max-width: 750px) {
-    // float: right;
     width: 100%;
   }
 `
