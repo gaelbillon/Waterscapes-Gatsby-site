@@ -41,18 +41,26 @@ const TitlesWrapper = styled.div`
   width: 100%;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
   text-align: center;
+  
+
+  color: white;
 `
 
 const Title = styled.h1`
+  // padding: 0 1rem;
   font-size: 3em;
-  text-transform: capitalize;
+  // text-transform: capitalize;
+  text-transform: uppercase;
   font-weight: 600;
-  padding: 0 1rem;
-  color: white;
 `
 const SubTitle = styled(Title)`
   font-size: 2em;
-  top: 65%;
+  text-transform: capitalize;
+  // text-transform: lowercase;
+  // &:first-letter {
+  //   text-transform: capitalize;
+  // }
+  // top: 65%;
 `
 
 const Hero = props => (
