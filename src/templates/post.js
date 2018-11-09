@@ -21,6 +21,10 @@ const SideBar = styled.div`
   width: 40%;
   float: right;
   margin-left: 1em;
+  @media (max-width: 700px) {
+    float: right;
+    width: 100%;
+  }
 `
 const PostTemplate = ({ data, pageContext }) => {
   const {
@@ -51,15 +55,15 @@ const PostTemplate = ({ data, pageContext }) => {
 
       <Container>
         <PostContentContainer>
+          <PageBody body={body} />
           <SideBar>
             <StaticMapbox location={location} />
             {images && <ImageGallery images={images} />}
           </SideBar>
-
-          <PageBody body={body} />
-          <PageLinks links={links} />
-
+          
+        <PageLinks links={links} />
           {tags && <TagList tags={tags} />}
+          
           <PostDate date={publishDate} />
         </PostContentContainer>
       </Container>

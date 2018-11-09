@@ -9,6 +9,12 @@ const Body = styled.div`
   font-size: 1.07em;
   letter-spacing: 0.01em;
   font-family: Georgia;
+  float: left;
+  width: 57%;
+  @media (max-width: 700px) {
+    float: right;
+    width: 100%;
+  }
   p {
     line-height: 1.6;
     margin: 0 0 2em 0;
