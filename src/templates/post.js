@@ -31,7 +31,7 @@ const SideBar = styled.div`
   width: 40%;
   float: right;
   // padding-left: 1em;
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     // float: right;
     width: 100%;
   }

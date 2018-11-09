@@ -19,7 +19,7 @@ const GalleryItem = styled(Img)`
     // outline: 1px solid #000;
     // width: 80%;
     // margin: auto;
-    // margin-bottom: 1em;
+    margin-bottom: 1vw;
   position: relative;
   // border: 1px solid ${props => props.theme.colors.secondary};
   // border-radius: 2px;

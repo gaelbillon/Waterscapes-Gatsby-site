@@ -22,6 +22,7 @@ const Body = styled.div`
       // font-weight: bold;
       margin-right: 0.15em;
     }
+    // text-align: justify;
   }
 
   a {
