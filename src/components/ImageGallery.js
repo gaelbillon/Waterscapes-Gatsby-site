@@ -22,7 +22,7 @@ const GalleryItem = styled(Img)`
     // border-bottom: 1em solid #fff;
     // outline: 1px solid #000;
 
-    margin-bottom: 1vw;
+    margin-top: 1vw;
   // position: relative;
   // border: 1px solid ${props => props.theme.colors.secondary};
   // border-radius: 2px;
@@ -32,12 +32,12 @@ const GalleryItem = styled(Img)`
   max-height: 20em;
     @media screen and (max-width: ${props => props.theme.responsive.medium}) {
     // flex: ${props => (props.featured ? '0 0 100%' : '0 0 32%')};
-    // margin-bottom: 2vw;
+    // margin-top: 2vw;
     // border: 3px solid orange;
   }
   @media screen and (max-width: ${props => props.theme.responsive.small}) {
     // flex: ${props => (props.featured ? '0 0 100%' : '0 0 49%')};
-    margin-bottom: 4vw;
+    margin-top: 4vw;
     // border: 3px solid red;
   }
 
@@ -46,16 +46,36 @@ const GalleryItem = styled(Img)`
   }
 `
 
+const Figure = styled.figure`
+  background-color: #fbfbfb;
+`
+
+const FigCaption = styled.figcaption`
+  text-align: center;
+  font-size: 0.7em;
+  // font-size: ${props => props.theme.fonts.article.fontSize};
+  letter-spacing: -0.06em;
+  word-wrap: break-word;
+  font-family: ${props => props.theme.fonts.sansSerif.fontFamily};
+  font-weight: 200;
+  padding: 0.2em;
+  padding-bottom: 0.4em;
+`
+
+
+
 const ImageGallery = props => (
     <List>
         {props.images.map(image => (
+          <Figure>
             <GalleryItem
                 key={image.id}
                 fluid={image.fluid}
                 height={image.width}
                 width={image.height}
-                caption={image.title}    
             />
+        <FigCaption>{image.title}. {image.description}</FigCaption>
+          </Figure>
     ))}
   </List>
 )
