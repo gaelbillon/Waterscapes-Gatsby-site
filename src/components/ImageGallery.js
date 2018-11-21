@@ -67,9 +67,9 @@ const FigCaption = styled.figcaption`
 const ImageGallery = props => (
     <List>
         {props.images.map(image => (
-          <Figure>
+      <Figure key={image.id}>
             <GalleryItem
-                key={image.id}
+                // key={image.id}
                 fluid={image.fluid}
                 height={image.width}
                 width={image.height}

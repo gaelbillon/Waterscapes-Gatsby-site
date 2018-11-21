@@ -3,7 +3,7 @@ module.exports = {
   siteTitleAlt: 'Waterscapes directory', // This allows an alternative site title for SEO schema.
   publisher: 'Gaël Billon', // Organization name used for SEO schema
   siteDescription:
-    'A directory of interesting bodies of water around the world : waterfalls, lakes, rivers, streams, creeks, springs, natural pools, hot springs and diving spots.',
+    'A directory of interesting bodies of water around the world : waterfalls, lakes, springs, rivers, streams, creeks, natural pools, hot springs and diving spots.',
   siteUrl: 'https://waterscap.es', // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
   postsPerHomePage: 41, // Number of posts shown on the 1st page of of the index.js template (home page)
   postsPerPage: 40, // Number of posts shown on paginated pages

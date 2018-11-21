@@ -27,7 +27,10 @@ const LeftColumn = styled.div`
 const SideBar = styled.div`
   width: 40%;
   float: right;
-  @media (max-width: 750px) {
+  // @media (max-width: 750px) {
+  //   width: 100%;
+  // }
+  @media screen and (max-width: ${props => props.theme.responsive.medium}) {
     width: 100%;
   }
 `
