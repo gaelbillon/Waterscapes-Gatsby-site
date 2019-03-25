@@ -68,12 +68,14 @@ const ImageGallery = props => (
     <List>
         {props.images.map(image => (
       <Figure key={image.id}>
+          <a href={image.file.url}>
             <GalleryItem
                 // key={image.id}
                 fluid={image.fluid}
                 height={image.width}
                 width={image.height}
             />
+          </a>  
         <FigCaption>{image.title}. {image.description}</FigCaption>
           </Figure>
     ))}

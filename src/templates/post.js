@@ -147,6 +147,9 @@ export const query = graphql`
                  width
                  height
                }
+               file {
+                 url
+               }
              }
            }
          }
